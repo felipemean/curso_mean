@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<htnml lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Mi primera página</title>
+</head>
+
+<body>
+	
+</body>
+	<script>
+	var cadena = "cualquierTexto y  otra palabra";
+	var cadenaB = "cualquierTexto";
+	
+	console.log("Longitue:  "+ cadena.length);
+	console.log( " Covertir a Mayusculas:  "+ cadena.toUpperCase());
+	console.log( " Covertir a Minusculas:  "+ cadena.toLowerCase());
+	console.log( " charAt(5):  "+ cadena.charAt(5));
+	console.log( " charAt(5):  "+ cadena[5]);
+	console.log( " Indext of t :  "+ cadena.indexOf("t"));
+	console.log( " Indext of t desde la izquierda:  "+ cadena.lastIndexOf("t"));
+	
+	console.log( " Substring 9:  "+ cadena.substring(9));
+	console.log( " Substring 9 con 4 caracteres:  "+ cadena.substring(9,4));
+	
+	var arrayDeCadena = cadena.split(" ");
+	
+	console.log( " palabrea 2da  "+ arrayDeCadena[1]);
+	console.log( " palabrea 6ta  "+ typeof arrayDeCadena[6]);
+	arrayDeCadena[6] = 83;
+	console.log( " palabrea 2da  "+ arrayDeCadena[1]);
+	console.log( " palabrea 2da  "+ typeof arrayDeCadena[1]);
+	console.log( " palabrea 6ta  "+ typeof arrayDeCadena[6]);
+	
+	arrayDeCadena.push("El PRIMERO");
+	arrayDeCadena.push("OTRO");
+	arrayDeCadena.push(67);
+	arrayDeCadena.push(true);
+	arrayDeCadena[4]=4;
+	
+	console.log("todo el arra: " + arrayDeCadena.join(",") );
+	var otraCadena= arrayDeCadena.join("*");
+	console.log("Union otraCadena : " + otraCadena );
+	
+	
+	
+	
+	
+	
+	</script
+</html>

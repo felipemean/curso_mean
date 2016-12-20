@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Mi primera página</title>
+	</head>
+	<body></body>
+<script>
+function burbuja(arreglo){
+//recorremos todos los elementos del array
+for (i=0; i<(arreglo.length-1);i++)
+//recorremos todos los elementos del array hasta n-i
+for (j=0; j<(arreglo.length-i);j++){
+	//Comparamos
+		if(arreglo[j]>arreglo[j+1]){
+		//guardamos el número mayor en el auxiliar
+		aux=arreglo[j];
+		//guardamos el número menor en el lugar	correspondiente
+		arreglo[j]=arreglo[j+1];
+		//asignamos el auxiliar	en el lugar correspondiente
+		arreglo[j+1]=aux;
+		}	
+	}
+return arreglo
+}
+
+//arreglo a ordenar
+var arregloAOrdenar=[1000,26,27,111,8,1,15,4,2,99,15,2,3];
+//invocamos la función
+arregloAOrdenar=burbuja(arregloAOrdenar);
+//imprimimos para ver el resultado
+alert(arregloAOrdenar)
+arregloAOrdenar.reverse()
+alert(arregloAOrdenar)
+
+</script>
+</html>
