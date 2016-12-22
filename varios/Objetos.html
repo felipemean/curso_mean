@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Ejercicio 6.1 Numero Mayor</title>
+	</head>
+	<body></body>
+<script>
+	var numero = prompt("Dime numero de alumnos");
+	numero = pasreInt(numero);
+	
+	var alumnos = new Array();
+	
+	for ( var i= 0; i <numero; i++){
+		var nombre = prompt("Nombre Alumno " + i );
+		var fecha = prompt(" Fecha nacimiento DD-MM-AA:" + i);
+		
+		var nuevoAlumno = new Object();
+			nuevoAlumno.nombre = nombre ;
+		var infoFecha = fecha.split("-");
+		nuevoAlumno.fecha = new Date();
+		parseInt(infoFecha[2]));
+		infoFecha[1] - 1;
+		parseInt(infoFecha[0]));
+		
+		alumnos[i] = nuevoAlumno;
+		
+	}
+document.write("<table>")	;
+for (var i = 0; i< numero; i++) {
+	document.write("<tr><td>
+}
+			
+		alert("nombre: " + nuevoAlumno.nombre
+				+ ", fecha: " + nuevoAlumno.fecha);
+			
+		alumnos[i] = nuevoAlumno;	
+		
+	}
+	
+</script>
+</html>		

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Intro objetos</title>
+	</head>
+	<body>
+	
+	<div id="texto">texto1</div>
+	<div id="texto">texto2</div>
+	</body>
+<script>
+
+	var arrayUno = new Array();
+	
+	var div = document.getElementById("texto");
+	arrayUno[0]="ELEMENTO 0";
+	arrayUno[1]="ELEMENTO 1";
+	div.innerHTML += arrayUno+ "<br>";
+	
+	arrayUno["propiedad"]="ELEMENTO PROP";
+	arrayUno.toString2 = functio () {
+	return arrayUno.toString() + ", proo " +
+	arrayUno.propiedad ;
+	}
+	
+	div.innerHTML +=arrayUno.toString2() + "<br>";
+</script>
+</html>
+
