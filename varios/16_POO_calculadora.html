@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Calculadora</title>
+	</head>
+	<body>
+		<form name="calc">
+			Operando 1 <input name="operando1" value="0" size="12"
+				maxlength="12" type="text">
+			<br>
+			Operando 2 <input name="operando2" value="0" size="12"
+				maxlength="12" type="text">
+			<br>
+			<input name="" value=" + "
+				onclick="calcula('+')" type="button">
+			<input name="" value=" - "
+				onclick="calcula('-') " type="button">
+			<input name="" value=" * "
+				onclick="calcula(  '*'   )" type="button">
+			<input name="" value=" / "
+				onclick="calcula ('/')" type="button">
+			<br>
+			Resultado <input name="resultado" value="0" size="12" type="text">
+		</form>
+		<div id='texto'>Operaciones realizadas:<br></div>
+	</body>
+<script>
