@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Calculadora</title>
+	</head>
+	<body>
+		<div id='texto'>
+			Rectangulo<br>
+			<div id='padreCalc'></div>
+		</div>
+		<div id='texto'>
+			Triangulo<br>
+			<div id='padreCalc2'></div>
+		</div>
+		<div id='texto'>
+			Cuadrado<br>
+			<div id='cuadrado'></div>
+		</div>
+	</body>
+<script src="18_CreadorDOM_cuadrados.js"></script>
+<script src="18_figuras_cuadrado.js"></script>
+<script>	
+	var padreCalc = document.getElementById("padreCalc");
+	var rectangulo = new Rectangulo(padreCalc);
+	
+	var padreCalc2 = document.getElementById("padreCalc2");
+	var triguangulo = new Triangulo(padreCalc2);
+	
+	var cuadrado = document.getElementById("cuadrado");
+	var cuadrado = new Cuadrado(cuadrado);
+</script>
+</html>
+

@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Herencia</title>
+	</head>
+	<body>
+		
+	</body>
+<script>	
+	function Padre(){
+		this.atributoPadre= 3;
+	}	
+	
+	function Hijo(){
+		this.atributoHijo= 15;
+	}	
+	Hijo.prototype= new Padre
+	
+	a= new Hijo;
+	document.write( 
+	"<h1>Hello World!</h1><p>Have a nice day! </p><br> " 	);
+	document.write(" El padre es: \n" +a.atributoPadre +"<br><br><br>");
+	
+	document.write("El hijo es : \n" + a.atributoHijo);
+	
+</script>
+</html>
+
