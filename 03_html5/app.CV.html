@@ -1,0 +1,50 @@
+﻿<html>
+
+<head>
+    <title>FORMURIO CURRICULUM</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- link href="css/style.css" rel="stylesheet" -->
+
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+</script>
+
+<body>
+    <h1>Formulario CURRICULUM</h1>
+    <form onsubmit="añadir()">
+        <p> Empresa: <input type="text" name="empresa" value="Ericsson"></p>
+        <p> Cargo: <input type="text" name="Cargo" value="Ericsson"><p>
+                <p> Fecha Inicio: <input type="date" name="fechaI" required />
+                    <p>
+                        <p> Fecha Fin <input type="date" name="fechaF" required /></p>
+                        <p>Localización: <input type="text" name="loc" required />
+                            <input type="submit" value="Añadir" />
+                        </p>
+                        <p> JSON: </p>
+                        <p> Var string = JSON.stringify({nombre: ‘Germán’, apellido : ‘Caballero’});
+                        </p>
+
+
+                        <input type="text" name="mensaje" id="mensaje" placeholder="Pon un mensaje de error" required="required" />
+                        <input type="email" name="email1" id="email1" placeholder="mail@dominio" title="Este campo es tipo Email" oninvalid="validacionPersonalizadaEmail(this)" required="required" />
+
+    </form>
+</body>
+<script>
+    /*Funcion de Capturar, Almacenar datos y Limpiar campos*/
+    $(document).ready(function() {
+        $('#boton_guardar').click(function() {
+            /*Captura de datos escrito en los inputs*/
+            var nom = document.getElementById("nombretx").value;
+            var apel = document.getElementById("apellidotx").value;
+            /*Guardando los datos en el LocalStorage*/
+            localStorage.setItem("Nombre", nom);
+            localStorage.setItem("Apellido", apel);
+            /*Limpiando los campos o inputs*/
+            document.getElementById("nombretx").value = "";
+            document.getElementById("apellidotx").value = "";
+        });
+    });
+</script>
+</html>

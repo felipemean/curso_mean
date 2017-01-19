@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>EJEMPLOS FORMULARIOS</title>
+</head>
+
+<body>
+    <h1>Input con atributos</h1>
+    <form id="miFormulario" action="#">
+        <div id="rosa">
+            <p>Nombre: <input type="text" name="nombre" size="70" value="([a-zA-Z��]{3}uben|German)" required pattern="([a-zA-Z��]{3}uben|German)" placeholder="Nombre" /></p>
+            <p>E-mail: <input type="email" name="email" size="70" value="email@ejemplo.com" required placeholder="email@ejemplo.com"></p>
+            <p>Color: <input type="color" name="color" required></p>
+            <p>URL: <input type="url" name="url" required>
+                <p>Edad: <input type="number" name="edad" min="0" max="100" value="0"></p>
+                <p>Rango: <input type="range" name="rango" min="-50" max="100"></p>
+                <p>Fecha: <input type="date" name="date_control" required/></p>
+                <p>hora: <input type="time" name="date_control2" required/></p>
+                <p>Fecha y hora: <input type="datetime-local" name="date_control3" required/></p>
+                <p>Mes: <input type="month" name="date_control4" required/></p>
+                <p>Semana: <input type="week" name="date_control5" required/></p>
+                <p>Telefono: <input type="tel" name="tlf" required/></p>
+                <p>Buscar: <input type="search" name="busca_control" required/></p>
+                <p>Lista: <input type="text" list="cafes" name="lista">
+                    <datalist id="cafes">
+			<option label="cafe solo" 					value="Cafe solo">
+			<option label="Cafe con leche" 					value="Cafe con leche">
+			<option label="Cafe descafeinado" value="Cafe descafeinado">
+			<option label="Carajillo" value="Carajillo">
+			<option label="Latte Macchiatto" value="Latte Macchiatto">
+			<option label="Chocolate" value="Chocolate"></p>
+		</datalist>
+        </div>
+        <p><input type="submit" value="enviar"></p>
+    </form>
+</body>
+
+</html>
