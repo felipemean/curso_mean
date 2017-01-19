@@ -34,28 +34,13 @@
 		body.appendChild(formCalc);
 		var texto = document.createTextNode("Operando X: ");
 		formCalc.appendChild(texto);
-		
-		
-	
 		var operadorA = document.createElement("input");
 		formCalc.appendChild(operadorA);
 		operadorA.name = "Operador A";
 		operadorA.value = "0";
 		operadorA.setAttribute("size", "12");
-		
-		var br = document.createElement("br");
-		formCalc.appendChild(br);
-	
-		var texto = document.createTextNode("Operando Y: ");
-		formCalc.appendChild(texto);
 		var operadorB = document.createElement("input");
 		formCalc.appendChild(operadorB);
-		operadorB.name = "Operador B";
-		operadorB.value = "0";
-		operadorB.setAttribute("size", "12");
-		
-		var br = document.createElement("br");
-		formCalc.appendChild(br);
 	}
 	
 	function calcula (operando) {

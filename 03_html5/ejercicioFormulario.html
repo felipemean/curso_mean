@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Formulario</title>
+</head>
+
+<body>
+    <section>
+        <form name="miformulario" id="miformulario" method="get">
+        	Nombre: <input type="text" name="nombre" id= "nombre" placeholder="felipe Gil"/><br>
+        	Email: <input type="email" name="email" id= "email" /><br>
+        	Color: <input type="color" name="color" id= "color" /><br>
+        	URL: <input type="url" name="url" id= "url" /><br>
+        	Edad: <input type="number" name="edad" min="18" max="65" id= "edad" /><br>
+        	Date: <input type="date" name="fecha" id= "fecha" /><br>
+        	Hora: <input type="time" name="time" id= "time" /><br>
+        	Telefono: <input type="tel" name="til" id= "tel" /><br>
+        	Buscar:  <input type="search" name="search" id= "search" /><br>
+        	Range: <input type="range" name="range" id= "range" /><br>
+            <!-- <input type="text" name="nombre" id="nombre"> -->
+            <datalist id="cafes">
+              <option value = "cortado" label="Cortado">             
+              <option value = "solo" label="Solo">      
+                <option value = "conl" label="Con leche">             
+              <option value = "desc" label="Descafeinado">      
+               <option value = "amer" label="Americano">             
+              <option value = "cap" label="Capuchino">                
+            </datalist>
+            Cafes: <input type="cafes" name="cafes" id="cafes" list="cafes"><br>
+           Codigo postal <input name="codigo" id= "codigo" pattern="[0-9]{5}" title="Inserte  5 numeros" /><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+</body>
+
+</html>

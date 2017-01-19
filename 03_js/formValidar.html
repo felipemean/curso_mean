@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>19_validadcion_RegExp</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+</head>
+
+<body>
+    <header>
+        <h1>Validación de Formulario </h1>
+    </header>
+    <section>
+        <!--
+
+        <p>Telefono</p>
+        <form id="telefono">
+            <input type="tel" name="text" value="67565665" required />
+        </form>
+        <p>DNI</p>
+        <form id="DNI">
+            <input type="tel" name="text" value="50055561V" required />
+        </form>
+        <p>Nonbre</p>
+        <form id="nombre">
+            <input type="tel" name="text" value="Felipe gil" required />
+        </form>
+        -->
+        <form name="miform" onsubmit="return ValidadCampos(this)">
+            DNI: <input type="text" name="dni" value="12345678V" size="9"><br> Telefono:
+            <input type="text" name="telefono" size="9" maxlength="9"><br><br>
+            <input type="submit" value="Enviar" name="enviar" />
+        </form>
+    </section>
+
+
+</body>
+<script>
+    function ValidaCampos(miformulario) {
+        var regexpTel = /^[5-9]{1}\d{8}$     / / 9 digitos
+        var regexpDni = /^\d{8}[a-zA-Z]$
+
+        if (regexpTel.test(miformulario.telefono.value) == false) {
+            alert("Campo de Teléfono no válido");
+            return false;
+        } else if (regexpTel.test(miformulario.dni.value) == false) {
+            alert("DNI no válido");
+            return false;
+        } else {
+            return true
+        }
+    }
+</script>
+
+</html>

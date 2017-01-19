@@ -1,0 +1,32 @@
+﻿<html>
+
+<head>
+    <title>Ejemplo de validación de un formulario</title>
+    <script>
+        function ValidaCampos(formulario) {
+            var expresion_regular_telefono = /^\d{9}$/;
+            // 9 cifras numéricas. 
+            var expresion_regular_dni = /^\d{8}[a-zA-Z]$/;
+            // 8 cifras numéricas más un carácter alfabético. 
+            // Usaremos el método "test" de las expresiones regulares: 
+            if (expresion_regular_telefono.test(formulario.telefono.value) == false) {
+                alert('Campo TELEFONO no válido.');
+                return false; // sale de la función y NO envía el formulario 
+            }
+            if (expresion_regular_dni.test(formulario.dni.value) == false) {
+                alert('Campo DNI no válido.');
+                return false; // sale de la función y NO envía el formulario 
+                // return true; // sale de la función y SÍ envía el formulario 
+            }
+    </script>
+</head>
+
+<body>
+    <p>Campos tipo teléfono y tipo dni usando expresiones regulares y JS</p>
+    <form name="formulario" onSubmit="return ValidaCampos(this)">
+        DNI:<input type="text" name="dni" size="9" maxlength="9"><br> Teléfono: <input type="text" name="telefono" size="9" maxlength="9"><br>
+        <input type="submit" value="Enviar" name="enviar">
+    </form>
+</body>
+
+</html>

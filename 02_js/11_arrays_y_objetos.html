@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Calculadora</title>
+	</head>
+	<body>
+		<div id="texto1">texto1</div>
+		<div id="texto2">texto2</div>
+	</body>
+<script>
+	var div = document.getElementById("texto2");
+	
+	var arrayUno = new Array();
+	
+	div.innerHTML = div.innerHTML + arrayUno + "<br>";
+	arrayUno[0]="ELEMENTO 0";
+	arrayUno[1]="ELEMENTO 1";
+	div.innerHTML += arrayUno + "<br>";	
+	arrayUno["propiedad"]="ELEMENTO PROP";	
+	arrayUno.toString = function () {
+		var resultado = "";
+		for (var i = 0; i < this.length; i++) {
+			resultado += ", "+ this[i];
+		}
+		return resultado + ", prop " + arrayUno.propiedad ;
+	}	
+	div.innerHTML += arrayUno + "<br>";
+	
+</script>
+</html>
+
