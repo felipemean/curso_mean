@@ -22,7 +22,7 @@ function ControladorSimple($scope, $scope) {
         });
     }
 }
-var moduloAplicacion = angular.module("listaReserva", []);
+var moduloAplicacion = angular.module("miAplicacion", []);
 
 moduloAplicacion.controller("ControladorMuySimple", ControladorSimple);
 

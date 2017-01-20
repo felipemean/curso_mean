@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="angular.js"></script>
+    <script>
+        var mymodule = angular.module("mymodule", []);
+        mymodule.controller("x", function ($scope, $timeout) {
+            $scope.miliSeconds = 0;
+            var countUp = function () {
+                $scope.miliSeconds += 1000;
+                $timeout(countUp, 1000);
+            }
+            $timeout(countUp, 1000);
+        });
+    </script>
+</head>
+<body ng-app="mymodule">
+    <div ng-controller="x">
+        <form id="form1">
+            <div ng-controller="x">
+                <span>Time (in ms): {{miliSeconds}}</span>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
