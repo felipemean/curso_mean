@@ -36,3 +36,21 @@ function ControladorAnimales($scope, $scope) {
 }
 
 moduloAplicacion.controller("UnControlDeAnimales", ControladorAnimales);
+
+moduloAplicacion.controller("ControladorX", ControladorCopy);
+
+function ControladorCopy($scope, $scope) {
+    $scope.clickCounter = 0;
+    $scope.check = function() {
+        $scope.clickCounter++;
+    }
+};
+
+moduloAplicacion.controller("ControladorCheques", ControladorCheche);
+
+function ControladorCheche($scope, $scope) {
+    $scope.Contador = 0;
+    $scope.chequeando = function() {
+        $scope.Contador++;
+    }
+};
