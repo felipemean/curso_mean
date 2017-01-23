@@ -9,30 +9,21 @@
 <body>
     <!-- Añadimos controlador en el div -->
     <div data-ng-controller="HabitacionesController as HsC">
-        <h2>Seleccion de Habitaciones</h2>
+        <h2>Habitaciones</h2>
         <h3>Cantidad: {{ HsC.cantidad() }}</h3>
         <!-- Campo de texto para introducir datos de la habitación -->
         <!-- Añadimos controlador en el div -->
         <div data-ng-controller="HabitacionController as HC">
             <!-- Campo de texto para introducir datos de la habitación -->
             Numero: <input type="number" data-ng-model="HC.numero" value="1" /></br>
-            ¿Doble?: <input type="checkbox" data-ng-model="HC.doble" value="false" /></br>
-            Fecha Inicio: <input type="datetime" data-ng-model="HC.fechainicio" required/></br>
-            Fecha Fin: <input type="datetime" data-ng-model="HC.fechafin" required/> </br>
-            dias <input type="number" data-ng-model="HC.dias" /> </br>
-            email:<input type="email" data-ng-model="HC.email" value="1" /></br>
-            <input type="button" value="RESERVAR" ng-click="HC.addHabitacion()" />
+            ¿Doble?: <input type="checkbox" data-ng-model="HC.doble" value="false" />
+            <input type="button" value="+" ng-click="HC.addHabitacion()" />
         </div>
 
         <ul>
             <li data-ng-repeat="habitacion in HsC.lista">
-                Nº {{ habitacion.numero}}: {{ habitacion.doble ? "Doble" : "Simple"}} : {{habitacion.dias}} días</br>
-                fecha Inicio : {{habitacion.fechainicio}} |------>>> fecha Fin : {{habitacion.fechafin}}</br>
-                email: {{habitacion.email}} </br>
-
-                Probando con las fechas: {{habitacion.fechainicio + hitacion.dias}}
-
-                <input type="button" value="CANCELAR" ng-click="HsC.delHabitacion(habitacion.numero)" />
+                Nº {{ habitacion.numero}}: {{ habitacion.doble ? "Doble" : "Simple"}}
+                <input type="button" value="X" ng-click="HsC.delHabitacion(habitacion.numero)" />
             </li>
         </ul>
     </div>
