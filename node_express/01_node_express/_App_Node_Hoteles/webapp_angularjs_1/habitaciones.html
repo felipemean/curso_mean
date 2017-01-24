@@ -1,0 +1,65 @@
+<html data-ng-app="habitaciones">
+
+<head>
+    <meta charset="utf-8">
+    <title>HabitacionesController ejemplo de AngularJS</title>
+    <link rel="stylesheet" href="scripts/bootstrap-3.3.6-dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- Añadimos controlador en el div -->
+    <div data-ng-controller="HabitacionesController as HsC">
+        <h2>Habitaciones</h2>
+        <!-- Campo de texto para introducir datos de la habitación -->
+        <!-- Añadimos controlador en el div -->
+        <div data-ng-controller="HabitacionController as HC">
+            <!-- Campo de texto para introducir datos de la habitación -->
+            <input type="number" data-ng-model="HC.numero" value="101" />
+            <input type="checkbox" data-ng-model="HC.doble" value="false" />
+            <input type="button" value="+" ng-click="HC.addHabitacion()" />
+        </div>
+        <h3>Nº de Habitaciones DISPONIBLESS: {{ HsC.cantidad() }}</h3>
+        <ul>
+            <li data-ng-repeat="habitacion in HsC.lista">
+                Nº {{ habitacion.numero}}: {{ habitacion.doble ? "Doble" : "Simple"}}
+                <input type="button" value="Anular" ng-click="HsC.delHabitacion(habitacion.numero)" />
+            </li>
+        </ul>
+    </div>
+
+    <div data-ng-controller="AReservarController as ARHC">
+        <h2>Habitaciones A Reservar</h2>
+        <!-- Campo de texto para introducir datos de las Reservas -->
+        <!-- Añadimos controlador en el div -->
+        <div>
+            <h3>Gestionar Reservas ( Agregar y Cancelar): {{ HsC.cantidad() }}</h3>
+            <div data-ng-controller="ReservasController as RHC">
+                <!-- Campo de texto para introducir datos de la habitación a Reservar -->
+                <input type="number" data-ng-model="RHC.numero" value="101" />
+                <input type="checkbox" data-ng-model="RHC.doble" value="false" />
+                <input type="date" data-ng-model="RHC.fechainicio" value="2017-01-20" />
+                <input type="date" data-ng-model="RHC.fechafin" value="2017-01-30" />
+                <input type="email" data-ng-model="RHC.email" value="name@gmail.com" />
+                <input type="button" value="Reservar" ng-click="RHC.addReserva()" /><br/>
+
+            </div>
+            <ul>
+                <li data-ng-repeat="reservas in ARHC.lista">
+                    Nº {{ reservas.numero}}: {{ reservas.doble ? "Doble" : "Simple"}}
+                    <input type="button" value="Cancelar Reserva" ng-click="ARHC.delReservas(Reservas.numero)" />
+                    <br/>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script src="js/modelo.js">
+</script>
+<script src="js/resevas.js">
+</script>
+<script src="js/habitaciones.js">
+</script>
+
+</html>

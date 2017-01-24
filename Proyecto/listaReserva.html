@@ -48,44 +48,8 @@
         </ul>
         {{ globalA }}
     </div>
-
-
-
-    <div>
-
-        <p ng-copy="copy='you have copied'"> *********************************************************************
-            <br /> Directivas ng-copy ng-cut ng-paste
-            <br />this p is actually having some text inside that.
-        </p>
-        <br />
-        <input type="text" ng-cut="cut=true" ng-paste="paste=true " /><br/>
-
-        <br /> you have copied = {{copy}}
-        <br /> you have Cut = {{cut}}
-        <br /> you have paste = {{paste}}
-
-        <div data-ng-controller="ControladorCheques">
-            <input type="checkbox" ng-model="modelo2" ng-change="chequeando()" /><br />
-            <br /> Checkboxes are Checked = {{modelo2}}<br />
-            <div>counter = {{Contador}} </div>
-
-        </div>
-
-        <div>
-            <div data-ng-controller="ControladorX">
-                ************************************************************************
-
-                <input type="checkbox" ng-model="model" ng-change="check()" />
-                <input type="checkbox" ng-model="model" />
-                <input type="text" ng-copy="copiar='Otra copia ng charly cambio'"><br/>
-                <label>I am Working for Second CheckBox</label><br /> Checkboxes are Checked = {{model}}<br />
-                <div> counter = {{clickCounter}} visto copy= {{copiar}} </div>
-            </div>
-        </div>
-        <script src=" https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js "></script>
-        <script src="listaReserva.js "></script>
-
-
+    <script src=" https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js "></script>
+    <script src="listaReserva.js "></script>
 </body>
 
 </html>

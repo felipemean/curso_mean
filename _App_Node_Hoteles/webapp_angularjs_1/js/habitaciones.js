@@ -20,7 +20,7 @@ function ControladorHabitacion() {
         this.numero++;
     }
 }
-var moduloAplicacion = angular.module("appNodeHotel", []);
+var moduloAplicacion = angular.module("habitaciones", []);
 
 moduloAplicacion.controller("HabitacionesController", ControladorHabitaciones);
 moduloAplicacion.controller("HabitacionController", ControladorHabitacion);
