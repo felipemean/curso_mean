@@ -1,0 +1,14 @@
+h2 {
+    margin-top: 25px;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+[class *="col-"] {
+    padding-top: 15 px;
+    padding-top: 15 px;
+    background-color: rgba(86, 61, 124, .15);
+    border: 1px solid #aaa;
+}
