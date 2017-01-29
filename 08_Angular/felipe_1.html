@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html data-ng-app="miAplicacion" lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body data-ng-controller="MiControlador">
+    <<p>Hola {{user.name}} {{user.lastName}}</p>
+        <input type="text" data-ng-model="name" /> {{ name }}
+        <input type="text" data-ng-model="apellido" /> {{ apellido }}
+
+
+        <script src="scripts/angular.min.js"></script>
+        <script src="miAplicacion.js"></script>
+</body>
+
+</html>
