@@ -1,0 +1,18 @@
+[{ "Habitacion": 101, "doble": false, "disponible": true }, 
+ { "Habitacion": 102, "doble": false, "disponible": true },
+ { "Habitacion": 103, "doble": false, "disponible": true }, 
+ { "Habitacion": 104, "doble": false, "disponible": true },
+ { "Habitacion": 105, "doble": true, "disponible": true }, 
+ 
+ { "Habitacion": 201, "doble": false, "disponible": true }, 
+ { "Habitacion": 202, "doble": false, "disponible": true }, 
+ { "Habitacion": 203, "doble": false, "disponible": true }, 
+ { "Habitacion": 204, "doble": false, "disponible": true },
+ { "Habitacion": 205, "doble": true, "disponible": true },
+ 
+ { "Habitacion": 301, "doble": false, "disponible": true }, 
+ { "Habitacion": 302, "doble": false, "disponible": true }, 
+ { "Habitacion": 303, "doble": false, "disponible": true }, 
+ { "Habitacion": 304, "doble": false, "disponible": true },
+ { "Habitacion": 305, "doble": true, "disponible": true }
+ ]

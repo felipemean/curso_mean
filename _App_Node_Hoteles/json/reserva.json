@@ -1,0 +1,10 @@
+[
+{"email":"f@gmail.com", "habitacion":101, "fechaInicio":"dd/mm/aaaa","FechaFin":"dd/mm/aaaa"},
+{"email":"f@gmail.com", "habitacion":102, "fechaInicio":"dd/mm/aaaa","FechaFin":"dd/mm/aaaa"},
+{"email":"f@gmail.com", "habitacion":103, "fechaInicio":"dd/mm/aaaa","FechaFin":"dd/mm/aaaa"},
+{"email":"f@gmail.com", "habitacion":104, "fechaInicio":"dd/mm/aaaa","FechaFin":"dd/mm/aaaa"},
+{"email":"f@gmail.com", "habitacion":201, "fechaInicio":"dd/mm/aaaa","FechaFin":"dd/mm/aaaa"},
+{"email":"f@gmail.com", "habitacion":301, "fechaInicio":"dd/mm/aaaa","FechaFin":"dd/mm/aaaa"},
+{"email":"f@gmail.com", "habitacion":302, "fechaInicio":"dd/mm/aaaa","FechaFin":"dd/mm/aaaa"},
+{"email":"f@gmail.com", "habitacion":305, "fechaInicio":"dd/mm/aaaa","FechaFin":"dd/mm/aaaa"}
+]
