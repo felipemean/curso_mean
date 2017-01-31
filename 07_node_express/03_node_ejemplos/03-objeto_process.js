@@ -9,7 +9,7 @@ let memKb = {
 }
 console.log(memKb);
 // process.exit(1);
-process.chdir("C:/Users/Administrator/Desktop/CURSO_MEAN_STACK/");
+process.chdir("C:\Users\tarde\Documents\curso_mean\07_node_express\03_node_ejemplos");
 console.log(process.cwd());
 // Información del entorno de usario
 console.log(process.env);
@@ -21,3 +21,10 @@ const now = Date.now();
 while (Date.now() - now < 500);
 // Tiempo pasado en micro segundos
 console.log(process.cpuUsage(startUsage));
+
+process.on('exit', function(codigo) {
+console.log('saliendo del proceso con código
+de salida', codigo);
+})
+
+
