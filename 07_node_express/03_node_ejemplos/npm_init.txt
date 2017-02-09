@@ -1,0 +1,41 @@
+C:\05_node_gulp>gulp -v
+[19:21:27] CLI version 3.9.1
+
+C:\05_node_gulp>npm init
+This utility will walk you through creating a package.j
+It only covers the most common items, and tries to gues
+
+See `npm help json` for definitive documentation on the
+and exactly what they do.
+
+Use `npm install <pkg> --save` afterwards to install a
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+name: (05_node_gulp) 05_node_gulp
+version: (1.0.0)
+description: Primeros pasos con gulp
+entry point: (gulpfile.js)
+test command:
+git repository:
+keywords:
+author: Felipe Gil
+license: (ISC) GPL
+Sorry, license should be a valid SPDX license expressio
+license: (ISC) MIT
+About to write to C:\05_node_gulp\package.json:
+
+{
+  "name": "05_node_gulp",
+  "version": "1.0.0",
+  "description": "Primeros pasos con gulp",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit
+  },
+  "author": "Felipe Gil",
+  "license": "MIT"
+}
+
+
+Is this ok? (yes) yes

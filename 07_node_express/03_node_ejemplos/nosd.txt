@@ -1,0 +1,18 @@
+"use strict";
+
+let fs = require("fs");
+let streamLectura2 = fs.createReadStream("fichero.txt");
+
+let data2 = "";
+
+streamLectura2.on("readable", alCrearStreamLectura);
+
+
+function alCrearStreamLectura() {
+   while ((buffer = streamLectura2.read())
+    console.log("Longitdu buffer: " + chunk.length);
+}
+
+function cuandoAcaba() {
+    console.log(data);
+}
