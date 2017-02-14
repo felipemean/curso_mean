@@ -4,7 +4,7 @@ var router = express.Router();
 
 //raiz de reservas/* y se añade una function
 router.get("/", function(req, res, next){
-     res.render('index', { title: 'Reserva Registrada' });
+     res.render('index', { title: 'Calendario' });
 }
 );
 router.get("/cliente", function(req, res, next){
