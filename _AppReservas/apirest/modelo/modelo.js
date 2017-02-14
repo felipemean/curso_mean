@@ -46,4 +46,4 @@ modelo.acceder("insertarBase", [
     (resultado) => {
         console.log("Datos insertasd");
     });
-module.exports = modelo;
+module.exports = modelo;cd
