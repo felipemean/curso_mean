@@ -1,0 +1,28 @@
+-Directorio raiz
+  - aplicaciob web web
+  
+  - apirest
+    - Aplicacion (app.js)
+        Servidor web (bin/www)
+    - modelo
+      - Schema.js
+      - LogicaNegocio
+        - Reservas
+        - Habitaciones
+        - Clientes
+    - rutas
+        - Index.js /
+        - Admin    /admin
+        - ApiRest  /api   
+            -/api/bookkings/
+            -/api/customers/
+            -/api/admin/rooms
+            -/api/admin/customers
+    
+  - web publica
+    - angular 2
+    - Recursos estaticoss
+       - estilos
+       - imagenes
+    
+  

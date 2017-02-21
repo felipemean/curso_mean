@@ -1,0 +1,32 @@
+Esquema Base
+  
+  * Room
+      - id
+      - isDouble : Boolean
+  * Customer
+      - id
+      - name
+      - email
+  * Booking
+      - booking_id
+      - customer_id
+      - room_id
+      - check-date
+      - type
+  
+  
+Aggregation queries for each use case:
+
+  (1) Availability for a given hotel and dates range (date1, date2)
+  
+      db.booking.aggregate( [
+        { $match: { $or: [ { check_in: { $lte: date1}, check_out: { $gt: date1 } },
+                           { check_in: { $gte: date1, $lte: date2 }}] } },
+        { $unwind: "$occupancy" },
+        { $group: { _id: "$occupancy.date", num_rooms_booked: { $sum: 1 } } }
+      ])
+
+      * compare the number of rooms booked to the total number of rooms in the hotel
+        (this query could be extended by using $lookup and $project stages to 
+         calculate if there are available rooms without bringing this logic into 
+         the application)

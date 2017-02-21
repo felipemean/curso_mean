@@ -1,0 +1,110 @@
+
+Main use cases: 
+  (1) given a hotel, available dates
+  
+  * repeat this query for every single day where availability needs to be checked
+  SELECT R.id 
+    FROM Room R
+    WHERE R.id NOT IN (
+      SELECT RR.room_id 
+        FROM Reservation R, Reservation_room RR 
+        WHERE R.reservation_id = RR.reservation_id AND
+              (R.checkin_date <= date AND R.checkout_date >= date) )
+    
+  (2) given a date, available hotels
+  (3) customer accessing his/her booking info
+
+==
+
+Normalized version:
+
+  * Hotel
+      - id
+      - name
+      - address
+      - last_comments
+  * Room
+      - id
+      - hotel_id
+      - type
+  * Rate
+      - id
+      - name
+      - season
+      - start_date
+      - end_date
+      - price
+  * Service
+      - id
+      - description
+      - price
+  * Customer
+      - id
+      - first_name
+      - last_name
+      - description
+      - registration_date
+  * Booking
+      - booking_id
+      - hotel_id
+      - customer_id
+      - reservation_date
+      - check-in_date
+      - check-out_date
+  * Booking_room
+      - reservation_id
+      - room_id
+  * Booking_service
+      - reservation_id
+      - service_id
+      - date
+      - quantity
+   
+== Denormalized version ==
+
+  * Room
+      - id
+      - hotel_id
+      - hotel_name
+      - hotel_address
+      - type
+      
+  * Booking
+      - booking_id => customerid_yyyymmdd_random
+      - hotel_id
+      - hotel_name
+      - hotel_address
+      - customer_id
+      - first_name
+      - last_name
+      - check-in_date
+      - check-out_date
+      - season
+      - occupancy [ {room_id, type, date, price}, ] - everysingle day
+      - services [ { service_id, date, description, price, quantity }]
+      - booking_total_price
+      - services_total_price
+
+  * [the rest of entities are modeled in the same way as their relational counterparts]
+  
+  * Comments (extra stuff)
+     - hotel_id
+     - reservation_id
+     - comment
+     - rating
+
+Aggregation queries for each use case:
+
+  (1) Availability for a given hotel and dates range (date1, date2)
+  
+      db.booking.aggregate( [
+        { $match: { $or: [ { check_in: { $lte: date1}, check_out: { $gt: date1 } },
+                           { check_in: { $gte: date1, $lte: date2 }}] } },
+        { $unwind: "$occupancy" },
+        { $group: { _id: "$occupancy.date", num_rooms_booked: { $sum: 1 } } }
+      ])
+
+      * compare the number of rooms booked to the total number of rooms in the hotel
+        (this query could be extended by using $lookup and $project stages to 
+         calculate if there are available rooms without bringing this logic into 
+         the application)
