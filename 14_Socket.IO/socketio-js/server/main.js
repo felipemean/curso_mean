@@ -37,7 +37,7 @@ function alConectarseAlguien(socket){
     io.sockets.emit("mensajes", messages);
       });
   //emitir un mensaje PRIVADO;    
-  socket.on("nuevo-mensajePrivado", function(data) {
+  socket.on("nuevo-mensaje-privado", function(data) {
      var socketDestino = socketsUsuario[data.destinatario];
       if (socketDestino) {
             socketDestino.emit("mensaje-privado", data);

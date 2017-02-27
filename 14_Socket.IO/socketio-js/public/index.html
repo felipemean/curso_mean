@@ -7,25 +7,20 @@
   <script src="main.js"></script>
 </head>  
 <body>  
-  <h1>Chat Node JS</h1>
-
+  <h1>Chat Node JS</h1></br>
+  <form onsubmit= "return identificar(this)">
+    <input type="text" id = "username" placeholder="Tu nombre"/>
+    //<input type="text" id = "texto" placeholder="escribe el mensaje"/>
+       <input type="submit" value="Identificar"/>
+  </form>
   <form onsubmit= "return enviarMensaje(this)">
-    <input type="text" id = "surname" placeholder="Tu nombre"/>
     <input type="text" id = "texto" placeholder="escribe el mensaje"/>
-    
-    <input type="submit" value="Enviar"/>
-   
-  </form>
-  <form onsubmit= "return enviarMensajePrivados(this)">
-    <input type="text" id = "surname" placeholder="Tu nombre"/>
-    <input type="text" id = "texto" placeholder="escribe el mensaje"/>
-     <input type="text" id = "dest" placeholder="escribe nombre Destinatario"/>
-   
-    <input type="submit" value="Enviar Mensajes Privados"/>
-  </form>
-    <div id="divMessages"></div>
-  <br/>
-  <div id="divMessagesPrivados"></div>
-  </br>
+     <input type="text" id = "destinatario" placeholder="escribe nombre Destinatario"/>
+     <input type="submit" value="Enviar"/>
+  </form> <h2>Mensajes Privados</h2>
+    <div id="divPrivados"></div>
+  <br/><h2>Mensajes Públicos</h2>
+  <div id="divMessages"></div>
+  
 </body>  
 </html>  

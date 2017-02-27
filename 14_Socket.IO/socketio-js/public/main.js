@@ -1,14 +1,18 @@
 // Establecer la conexion creando
-var socket = io.connect("http://localhost:8080");
+var socket = io.connect("/", { "forceNew": true});
 socket.on("mensajes", alRecibirMensaje);
+socket.on("mensaje-privado", alRecibirMensajePrivado);
 
 function alRecibirMensaje(data) {
     //alert(JSON.stringify(data));
     mostrarMensajes(data);
 }
 function alRecibirMensajePrivado(data) {
-    //alert(JSON.stringify(data));
-    mostrarMensajesPrivado(data);
+    document.getElementById("divPrivados").innerHTML +=
+        `<div>
+            <strong>${data.author}</strong>: 
+            <em>${data.text}</em>
+       </div>`;
 }
 
 function mostrarMensajes(data){
