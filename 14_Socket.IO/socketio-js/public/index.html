@@ -1,0 +1,31 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8">
+  <title>My Aplicación con Sockets</title>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="main.js"></script>
+</head>  
+<body>  
+  <h1>Chat Node JS</h1>
+
+  <form onsubmit= "return enviarMensaje(this)">
+    <input type="text" id = "surname" placeholder="Tu nombre"/>
+    <input type="text" id = "texto" placeholder="escribe el mensaje"/>
+    
+    <input type="submit" value="Enviar"/>
+   
+  </form>
+  <form onsubmit= "return enviarMensajePrivados(this)">
+    <input type="text" id = "surname" placeholder="Tu nombre"/>
+    <input type="text" id = "texto" placeholder="escribe el mensaje"/>
+     <input type="text" id = "dest" placeholder="escribe nombre Destinatario"/>
+   
+    <input type="submit" value="Enviar Mensajes Privados"/>
+  </form>
+    <div id="divMessages"></div>
+  <br/>
+  <div id="divMessagesPrivados"></div>
+  </br>
+</body>  
+</html>  
